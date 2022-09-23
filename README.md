@@ -1,8 +1,6 @@
 # pre-commit workshop
 
-[En desarrollo]
-
-Taller de configuración y uso de git-hooks, pre-commit y husky.
+Taller de configuración y uso de [git-hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) y [pre-commit](https://pre-commit.com/).
 
 ## Introducción
 
@@ -145,12 +143,28 @@ Para añadirlo a la lista de comandos, puedes definirlo como:
         language: system
 ```
 
-## Husky
+## Hooks útiles
+
+### Black
+
+[Black](https://github.com/psf/black) es un formateador de código bastante ligero. Recomiendo ver la [charla en PyCon2019](https://www.youtube.com/watch?v=esZLCuWs_2Y) para ver cómo funciona internamente.
+
+### Xenon
+
+[Xenon](https://xenon.readthedocs.io/en/latest/) es una herramienta de monitorización basada en [Radon](https://github.com/rubik/radon/) para supervisar la complejidad del código.
+
+### Bandit
+
+[Bandit](https://bandit.readthedocs.io/en/latest/) es una herramienta para encontrar problemas de seguridad comunes en el código de Python.
+
+## Otras herramientas
+
+### Husky
 
 [Husky](https://typicode.github.io/husky/#/) es un módulo javascript, parecido a pre-commit pero con algunas diferencias y similitudes. Las principales IMO son:
 
 Ventajas:
-- Antiguo: [Se instala automáticamente al instalar dependencias con `npm install`]. Husky parece que [ya no se autoinstala automáticamente](https://blog.typicode.com/husky-git-hooks-autoinstall/). TODO: Investigar esto
+- Antiguo: [Se instala automáticamente al instalar dependencias con `npm install`]. Husky parece que [ya no se autoinstala automáticamente](https://blog.typicode.com/husky-git-hooks-autoinstall/).
 
 Desventajas:
 - No se pueden referencias comandos de terceros como con pre-commit.
