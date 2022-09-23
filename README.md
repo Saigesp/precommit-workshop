@@ -100,6 +100,8 @@ repos:
 ```
 > Atención! Para repositorios externos es muy importante incluir el código de versión (P.e.: `rev: 21.12b0`), en caso de no hacerlo seríamos vulnerables en caso de que ese repositorio introdujese código malicioso.
 
+### Scripts personalizados
+
 Con pre-commit también podemos definir nuestros propios scripts y agregarlos a la lista de comandos. Un script sencillo para comprobar que no haya prints en el código a subir puede ser:
 
 ```sh
@@ -142,6 +144,10 @@ Para añadirlo a la lista de comandos, puedes definirlo como:
         pass_filenames: false
         language: system
 ```
+
+### Uso en CI
+
+Para utilizar pre-commit en la integración continua basta con añadir `pre-commit run --all-files` como comando, o `pre-commit run --from-ref origin/HEAD --to-ref HEAD` para comprobar sólo los archivos que han cambiado.
 
 ## Hooks útiles
 
