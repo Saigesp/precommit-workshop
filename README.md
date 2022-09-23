@@ -34,6 +34,20 @@ Eligiendo a qué comando Git asociar el Hook
 
 Su ámbito es local, es decir, no se comparte entre las distintos clones del repositorio. Para poder compartirlo existen otras herramientas como pre-commit o husky (este para repositorios npm)
 
+### Hooks
+
+Los hooks más habituales son:
+
+- `pre-commit`: se ejecuta primero, antes de escribir un mensaje de commit. Se utiliza para inspeccionar la instantánea que está a punto de ser comiteada.
+
+- `prepare-commit-msg`: se ejecuta antes de que se active el editor de mensajes de commit pero después de que se cree el mensaje por defecto (útil para mensajes por defecto o autogenerados).
+
+- `commit-msg`: usado generalmente para validar los mensajes de commit. Si este script exits distinto de cero, Git aborta el proceso de commit.
+
+- `post-commit`: se ejecuta después de generarse el commit. Útil para notificaciones o similar.
+
+- `pre-push`: se ejecuta antes de hacer push, después de que se hayan actualizado las referencias remotas pero antes de que se haya transferido ningún objeto. Se puede utilizar para validar un conjunto de actualizaciones de ref antes de que se produzca un push (un código de salida distinto de cero abortará el push).
+
 ## pre-commit
 
 [pre-commit](https://pre-commit.com/) es una librería python open source para gestionar estas automatizaciones más cómodamente. Inicialmente se desarrolló para python pero actualmente se puede utilizar en cualquie proyecto.
