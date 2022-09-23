@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def main():
     assert 1 == 1
     print('--> test passed')
