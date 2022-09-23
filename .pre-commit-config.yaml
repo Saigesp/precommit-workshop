@@ -31,7 +31,7 @@ repos:
     rev: 1.7.3
     hooks:
       - id: bandit
-        args: ["--exclude", "tests"]
+        args: ["--exclude", "tests", "-s", "B101"]
 
   - repo: https://github.com/psf/black
     rev: 21.12b0
